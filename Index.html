@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>E-book “Sua Primeira Tattoo” + Voucher | XX Ink Studio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+      min-height: 100vh;
+      align-items: center;
+    }
+    .container {
+      max-width: 600px;
+      width: 100%;
+      background: #1a1a1a;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 0 20px rgba(230, 57, 70, 0.5);
+    }
+    h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      color: #e63946;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 6px;
+    }
+    button {
+      width: 100%;
+      background-color: #e63946;
+      color: #fff;
+      font-size: 18px;
+      padding: 14px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #d62839;
+    }
+    .small {
+      font-size: 12px;
+      margin-top: 10px;
+      color: #aaa;
+      text-align: center;
+    }
+  </style>
+  <script>
+    function redirectToWhatsApp() {
+      const contato = document.getElementById('contato').value.trim();
+      if (contato === '') {
+        alert('Por favor, insira seu WhatsApp ou e-mail.');
+        return;
+      }
+      const encodedContato = encodeURIComponent(contato);
+      const url = `https://wa.me/5521981130991?text=Olá!%20Acabei%20de%20garantir%20meu%20e-book%20e%20o%20desconto%20de%20R$30%20no%20XX%20Ink%20Studio.%20Meu%20contato:%20${encodedContato}`;
+      window.location.href = url;
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>📘 E-book “Sua Primeira Tattoo”</h1>
+    <p>Descubra tudo que você precisa saber antes de fazer sua primeira tattoo com o guia mais direto e completo do mercado. E ainda ganhe R$30 de desconto em tattoos acima de R$150 no XX Ink Studio!</p>
+    <input type="text" id="contato" placeholder="Seu WhatsApp ou E-mail" />
+    <button onclick="redirectToWhatsApp()">QUERO ME PREPARAR E GARANTIR MEU DESCONTO</button>
+    <div class="small">*Desconto válido para tattoos acima de R$150. Oferta por tempo limitado.</div>
+  </div>
+</body>
+</html>
